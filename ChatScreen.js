@@ -3,7 +3,7 @@ import { GiftedChat } from 'react-native-gifted-chat'
 import SQLite from 'react-native-sqlite-storage';
 import { Container, Content, Header, Left, Body, Right, Button, Icon, Title, Toast } from 'native-base';
 
-export default class Example extends React.Component {
+export default class ChatScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
