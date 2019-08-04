@@ -5,6 +5,7 @@ import SQLite from 'react-native-sqlite-storage';
 
 // 메인 채팅 화면
 export default class chatScreen extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -15,11 +16,13 @@ export default class chatScreen extends React.Component {
 
 // 예시 메시지
   componentWillMount() {
+    const { navigation } = this.props;
+    const id = navigation.getParam("id");
     this.setState({
       messages: [
         {
           _id: 1,
-          text: 'Hello developer',
+          text: id,
           createdAt: new Date(),
           user: {
             _id: 2,
