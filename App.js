@@ -2,6 +2,7 @@ import { createSwitchNavigator, createAppContainer } from 'react-navigation';
 import loginScreen from './src/screens/LoginScreen';
 import chatScreen from './src/screens/ChatScreen';
 
+// 홈은 로그인 스크린, 로그인 성공시 챗스크린으로 이동
 const App = createSwitchNavigator(
   {
     Home: { screen: loginScreen },

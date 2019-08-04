@@ -13,6 +13,7 @@ export default class chatScreen extends React.Component {
     };
   }
 
+// 예시 메시지
   componentWillMount() {
     this.setState({
       messages: [
@@ -30,6 +31,7 @@ export default class chatScreen extends React.Component {
     })
   }
 
+// 메시지 전송
   onSend(messages = []) {
     this.setState(previousState => ({
       messages: GiftedChat.append(previousState.messages, messages),
