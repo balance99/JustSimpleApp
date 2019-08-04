@@ -10,8 +10,11 @@
     "native-base": "^2.13.4",
     "react": "16.8.3",
     "react-native": "0.59.9",
+    "react-native-gesture-handler": "^1.3.0",
     "react-native-gifted-chat": "^0.9.11",
+    "react-native-navigation": "^2.26.3",
     "react-native-sqlite-storage": "^3.3.11",
+    "react-navigation": "^3.11.1",
     "realm": "^2.29.0"
   },
   "devDependencies": {

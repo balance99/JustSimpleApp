@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+import { Container, Content, Header, Left, Body, Right, Button, Icon, Title, Toast } from 'native-base';
 import { GiftedChat } from 'react-native-gifted-chat'
 import SQLite from 'react-native-sqlite-storage';
-import { Container, Content, Header, Left, Body, Right, Button, Icon, Title, Toast } from 'native-base';
 
-export default class ChatScreen extends React.Component {
+// 메인 채팅 화면
+export default class chatScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
