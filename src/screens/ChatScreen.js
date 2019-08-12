@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Container, Content, Header, Left, Body, Right, Button, Icon, Title, Toast } from 'native-base';
-import { GiftedChat } from 'react-native-gifted-chat'
+import { Container, Content, Header, Left, Body, Right, Button, Title, Icon, Toast } from 'native-base';
+import { GiftedChat } from 'react-native-gifted-chat';
 import SQLite from 'react-native-sqlite-storage';
 
 // 메인 채팅 화면
@@ -38,7 +38,16 @@ export default class chatScreen extends React.Component {
   onSend(messages = []) {
     this.setState(previousState => ({
       messages: GiftedChat.append(previousState.messages, messages),
-    }))
+    })),
+// 내가 입력한 메시지
+    alert(messages[0].text)
+  }
+
+// 로그인 화면으로 이동
+// TODO 로그아웃 기능 추가
+  moveBack() {
+    const { navigate } = this.props.navigation;
+    navigate('Home')
   }
 
   render() {
@@ -60,7 +69,7 @@ export default class chatScreen extends React.Component {
           <Button transparent>
             <Icon name='heart' />
           </Button>
-          <Button transparent>
+          <Button transparent onPress={() => this.moveBack()}>
             <Icon name='more' />
           </Button>
         </Right>

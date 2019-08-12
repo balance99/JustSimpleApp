@@ -44,9 +44,8 @@ connectByFetch(){
       this.setState({
       fromServer: responseJson
         })
-         // 서버 응답 있을 시 alert창 띄우고 화면 이동(아이디를 화면에 전달)
+         // 서버 응답 있을 시 화면 이동(아이디를 화면에 전달)
          if (responseJson.length > 0) {
-           alert('로그인 되었습니다'),
            navigate('chatScreen', { id: this.state.id_input })
           }
       })
